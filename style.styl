@@ -1,0 +1,142 @@
+sectionSeparatorColor = #AAA
+html
+	background-color: #CCC
+	color: #222
+	font-family: verdana, tahoma, helvetica, sans-serif
+	
+body
+	max-width: 800px
+	margin: 1rem auto
+	background-color: #DDD
+	padding: 3rem
+
+img
+	float: left
+	margin-right: 3rem
+	width: 180px
+	height: 180px
+	border-radius: 50%
+
+a
+	color: #228
+	text-decoration: none
+	&:hover
+		background-color: #CCF
+
+h1
+	margin-bottom: 0.5rem
+	
+section
+	margin-bottom: 1rem
+
+ul
+	margin-block-start: 0
+	padding-inline-start: 0
+	list-style-type: none
+	li
+		margin-bottom: 0.25rem
+
+h2
+	display: inline-block
+	width: 100%
+	border: 0
+	border-top: 1px solid sectionSeparatorColor
+	margin-top: 1rem
+	padding-top: 1rem
+	font-size: 1.3rem
+	text-transform: uppercase
+
+.personal-data
+	float: left
+	margin-bottom: 0
+	#mail
+		&::before
+			content:'✉'
+			margin-right: 0.25rem
+	#phone
+		&::before
+			content:'✆'
+			margin-right: 0.25rem
+.hidden
+	display: none
+
+span
+	display: block
+	margin-bottom: 0.5rem
+	width: 100%
+
+.project
+.company
+	font-weight: 700
+.description
+.responsibilities
+	margin-left: 2rem
+.responsibilities
+	font-style: italic
+	opacity: 0.7
+.projectLink
+	clear: both
+	display: inline-block
+	margin-bottom: 0.5rem
+	margin-left: 2rem	
+.year
+	width: 8rem
+	float: left
+.company
+	float: left
+	width: auto
+.responsibility
+	margin-left: 8rem
+	clear: both
+
+knowledgeWidth = 11.8
+
+.knowledge
+	span
+		float: left;
+		width: (knowledgeWidth)rem
+.level
+	display: none
+
+.level1
+.level2
+.level3
+.level4
+.level5
+	margin: 0 0.25rem 0.5rem 0.25rem
+	border: 1px solid #999
+	height: 1.3rem
+	display: block
+	position: relative;
+	z-index: 1
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		height: 1.3rem
+		background-color: #BBB
+		z-index: -1
+
+.level1::before
+	width: (knowledgeWidth/5)rem
+.level2::before
+	width: (knowledgeWidth*2/5)rem
+.level3::before
+	width: (knowledgeWidth*3/5)rem
+.level4::before
+	width: (knowledgeWidth*4/5)rem
+.level5::before
+	width: (knowledgeWidth)rem
+
+.hobbies
+.personality
+	ul
+		list-style-type: square
+		padding-inline-start: 2rem;
+
+footer
+	margin-top: 1rem
+	border-top: 1px solid sectionSeparatorColor
+	opacity: 0.6
+	font-size: 0.8rem
+	text-align: right

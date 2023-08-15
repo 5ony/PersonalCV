@@ -1,0 +1,30 @@
+img(src='profile-pic.jpg')
+section.personal-data
+	h1 Sándor Illés
+	p
+		| Software developer engineer, Hungary
+	p#revealButton
+		button(onclick='revealData()') Click to reveal more
+	p
+		a.hidden#mail(target='_blank' rel='noreferrer' href='')
+	p
+		a.hidden#phone(target='_blank' rel='noreferrer' href='')
+
+	script.
+		function revealData() {
+			document.getElementById('revealButton').remove();
+
+			// obfuscating for bots
+			mail = ['gmail.com','@','illes.s.sandor'].reverse().join('');
+			phone = ['7669','396','70','+36'].reverse().join('');
+
+			addData('mail', 'mailto:', mail)
+			addData('phone', 'tel:', phone)
+		}
+
+		function addData(id, preData, data) {
+			element = document.getElementById(id);
+			element.removeAttribute('class')
+			element.href = preData + data;
+			element.innerText = data;
+		}
